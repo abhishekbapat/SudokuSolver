@@ -1,5 +1,4 @@
 import lib.sudoku_solver as solver
-import lib.image_processor as ip
 
 Arr = [[3, 0, 0, 0, 0, 9, 8, 0, 1],
        [0, 0, 6, 0, 0, 0, 0, 0, 9],
@@ -14,9 +13,7 @@ Arr = [[3, 0, 0, 0, 0, 9, 8, 0, 1],
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # if solver.solve_sudoku(Arr):
-    #     solver.print_sudoku(Arr)
-    # else:
-    #     print("Solution the above problem does not exist")
-    ip.detect_grid_p(".\\resources\\input_images\\sudoku_puzzle1.jpg",
-                   ".\\resources\\processed_images\\sudoku_puzzle1.jpg")
+    if solver.solve_sudoku(Arr):
+        solver.print_sudoku(Arr)
+    else:
+        print("Solution the above problem does not exist")
